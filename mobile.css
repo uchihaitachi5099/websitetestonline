@@ -1,0 +1,162 @@
+body {
+    font-family: "Varela Round", "Ionicons";
+    margin: 0;
+    background-color: #5b13b9;
+}
+.container {
+    width: auto;
+    margin: auto;
+}
+.header-section {
+  color: white;
+}
+.header-section nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+  
+.header-section main {
+    text-align: center;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+}
+  
+.menu-item {
+    display: inline-block;
+    padding-right: 30px;
+    line-height: 27px;
+}
+  
+  
+.menu-item a {
+    color: inherit;
+    text-decoration: none;
+}
+  
+.menu-item a:hover {
+    color: black;
+}
+
+.toggle, .toggle:before, .slot__label, .curtain {
+    transition-property: background-color, transform, visibility;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in, cubic-bezier(0.6,0.2,0.4,1.5), linear;
+}
+.toggle:before, .slot, .slot__label {
+    display: block;
+}
+.toggle:before, .curtain {
+    position: absolute;
+}
+.toggle:checked, .curtain {
+    background-color: #19283F;
+}
+.toggle:focus {
+    outline: transparent;
+}
+.toggle {
+    border-radius: 0.75em;
+    box-shadow: 0 0 0 0.1em inset;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.25em;
+    width: 3em;
+    height: 1.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.toggle:before {
+    background: currentColor;
+    border-radius: 50%;
+    content: "";
+    left: 0.2em;
+    width: 1.1em;
+    height: 1.1em;
+}
+.toggle:checked:before {
+    transform: translateX(1.5em);
+    top: 0.2em;
+}
+.toggle:checked ~ .slot .slot__label, .slot__label:nth-child(2) {
+    transform: translateY(-50%) scaleY(0);
+}
+.toggle:checked ~ .slot .slot__label:nth-child(2) {
+    transform: translateY(-100%) scaleY(1);
+}
+  
+.toggle:checked ~ .curtain {
+    transform: scaleX(1);
+}
+.slot {
+    color: transparent;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    overflow: hidden;
+    height: 1em;
+    -webkit-text-stroke: 0.05em #fff;
+}
+.slot__label {
+    transform-origin: 50% 0;
+}
+.slot__label:nth-child(2) {
+    transform-origin: 50% 100%;
+}
+.curtain {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    z-index: -1;
+}
+.sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Начална позиция извън екрана */
+    width: 80%; /* Ширина на sidebar */
+    height: 100%;
+    background-color: #333; /* Цвят на sidebar */
+    transition: left 0.3s; /* Анимация при промяна на left стойността */
+}
+
+/* Стилове за бутона за показване на sidebar */
+.show-sidebar-button {
+    font-size: 60px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 999; /* Поставяне на бутона над всичко друго */
+}
+
+/* Стилове за анимация на показване на sidebar */
+.sidebar-open {
+    left: 0; /* Показване на sidebar при излизане от лявата страна */
+    font-size: 60px;
+}
+.sidebar-menu li {
+    padding: 10px; /* Вътрешно запълване (padding) */
+    background-color: #444; /* Цвят на фона на <li> елементите */
+    border-radius: 5px; /* Закръглени ръбове */
+    margin: 5px 0; /* Разстояние между <li> елементите отгоре и отдолу */
+}
+.sidebar-menu li + li {
+    top: 50px;
+    margin-top: 500px;
+}
+.sidebar-menu li:first-child {
+    margin-top: 200px;
+}

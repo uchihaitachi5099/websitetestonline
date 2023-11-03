@@ -1,0 +1,715 @@
+body {
+  font-family: "Varela Round", "Ionicons";
+  font-size: 15px;
+  margin: 0;
+  background-color: #5b13b9;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+}
+
+
+.button {
+  color: white;
+  background-color: blue;
+  border: none;
+  padding: 13px 40px;
+  border-radius: 15px;
+  outline: none;
+  display: inline-block;
+}
+.button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: rgb(2, 217, 255);
+  color: white;
+  cursor: pointer;
+}
+
+.header-section {
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 125px;
+}
+
+.header-section nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.header-section main {
+  text-align: center;
+}
+
+
+
+
+.menu {
+  list-style: none;
+  margin: 0;
+}
+
+.menu-item {
+  display: inline-block;
+  padding-right: 30px;
+  line-height: 27px;
+}
+
+
+.menu-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-item a:hover {
+  color: black;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0 20px;
+}
+
+.search-icon {
+  display: block;
+  width: 23px;
+  height: 24px;
+  background: url(icon.png) no-repeat;
+}
+.tut {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.tut-photo {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.button{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 95px;
+  width: 360px;
+  background: #7D2AE8;
+  border-radius: 55px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  overflow: hidden;
+}
+.button.active{
+  height: 20px;
+  width: 500px;
+}
+.button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: #5b13b9;
+  border-radius: 55px;
+  transition: all 6s ease-in-out;
+}
+.button.active::before{
+  animation: layer 6s ease-in-out forwards;
+}
+@keyframes layer {
+  100%{
+    left: 0%;
+  }
+}
+.button .content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  transition-delay: 0.2s;
+}
+.button.active .content{
+  transform: translateY(60px);
+}
+.button .content i,
+.button .content .button-text{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+}
+.button .content .button-text{
+  font-size: 28px;
+  margin-left: 8px;
+}
+
+
+
+body.dark {
+  background-color: #18191a;
+}
+.toggle {
+  position: relative;
+  height: 30px;
+  width: 90px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.toggle::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #18191a;
+  border-radius: 50%;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.toggle.active::before {
+  background-color: #18191a;
+  left: calc(100% - 10px - 14px);
+}
+
+
+.sun {
+  height: 30px;
+  width: 30px;
+}
+.moon {
+  height: 30px;
+  width: 30px;
+}
+
+
+
+
+
+
+
+::-moz-selection {
+  background: #3F8EFC;
+  color: #fff;
+}
+
+::selection {
+  background: #3F8EFC;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.download {
+  position: absolute;
+  top: calc(50% - 30px);
+  right: calc(50% - 115px);
+  width: 230px;
+  height: 60px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.075), rgba(255, 255, 255, 0.045));
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.09), inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 0 1px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 5px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.67, 0.13, 0.1, 0.81), transform 0.15s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.download:hover {
+  right: calc(50% - 200px);
+  width: 400px;
+}
+
+.download:active {
+  transform: translateY(3px);
+}
+
+.download:before, .download:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 0.3s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.download:before {
+  content: "DOWNLOAD";
+}
+
+.download:after {
+  content: "Click to select a platform";
+  top: -60px;
+  opacity: 0;
+}
+
+.download:hover:after {
+  top: 0px;
+  opacity: 1;
+}
+
+.download:hover:before {
+  top: 60px;
+  opacity: 0;
+}
+
+.platforms {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 290px);
+  height: 200px;
+  width: 580px;
+  background-color: #7D2AE8;
+  border-radius: 20px;
+  visibility: hidden;
+  transform: scale(0.9);
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.platforms:target {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.platforms a {
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  color: #3F8EFC;
+  text-transform: uppercase;
+  transition: top 0.5s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.platforms a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.platforms a:nth-child(2) {
+  left: 200px;
+}
+
+.platforms a:nth-child(3) {
+  left: 390px;
+  transition-delay: 0.1s;
+}
+
+.platforms:target a {
+  top: 10px;
+}
+
+.platforms a:hover {
+  background: #E5F4FF;
+  box-shadow: 0 0 0 1px #A5CFFF;
+}
+
+.platforms a:before {
+  content: attr(data-os);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.platforms a:after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 120px;
+  line-height: 140px;
+  text-align: center;
+  font-size: 300%;
+  transform: scale(1.25);
+  transform-origin: center center;
+}
+
+.platforms a:nth-child(1):after {
+  content: '\f247';
+}
+
+.platforms a:nth-child(2):after {
+  content:"\f225";
+}
+
+.platforms a:nth-child(3):after {
+  content: "\f2c5";
+}
+
+.installer {
+  position: fixed;
+  top: calc(50% - 150px);
+  left: calc(50% - 300px);
+  width: 600px;
+  height: 300px;
+  background: #fff;
+  border-radius: 20px;
+  visibility: hidden;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.installer:target {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.installer a.back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 200%;
+  color: #bbb;
+}
+
+.installer a.back:before {
+  content: "\f129";
+}
+
+.installer a.back:after {
+  content: "Back";
+  position: absolute;
+  top: 7px;
+  left: 30px;
+  height: 20;
+  line-height: 20px;
+  font-size: 40%;
+  text-align: center;
+  color: #cacaca;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.installer a.back:hover:after {
+  left: 38px;
+  opacity: 1;
+}
+
+.installer a.close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 200%;
+  color: #bbb;
+}
+
+.installer a.close:before {
+  content: "\f405";
+}
+
+.installer a.close:after {
+  content: "Close";
+  position: absolute;
+  top: 7px;
+  right: 30px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 40%;
+  text-align: center;
+  color: #cacaca;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.installer a.close:hover:after {
+  right: 38px;
+  opacity: 1;
+}
+
+.installer .info {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  height: calc(100% - 80px);
+  width: 200px;
+}
+
+.installer .info:before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 180px;
+  height: 220px;
+  line-height: 220px;
+  text-align: center;
+  font-size: 1000%;
+  color: #3F8EFC;
+}
+
+.installer .info:after {
+  content: attr(data-weight);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 100%;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.installer#windows .info:before {
+  content: "\f247";
+}
+
+.installer#android .info:before {
+  content: "\f225";
+}
+
+.installer#linux .info:before {
+  content: "\f2c5";
+}
+
+.installer .details {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  height: 200px;
+  width: calc(100% - 280px);
+  padding: 10px;
+}
+
+.installer .details p {
+  margin: 0px;
+  font-weight: bolder;
+  font-size: 120%;
+  color: #444;
+}
+
+.installer .details span {
+  color: #cacaca;
+}
+
+.installer .details ul {
+  padding-left: 0px;
+  list-style: none;
+  color: #888;
+}
+
+.installer .details ul li {
+  margin-left: 0px !important;
+  margin-bottom: 8px;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.67, 0.13, 0.1, 0.81);
+}
+
+.installer .details ul li:before {
+  content: "";
+  margin-right: 0;
+}
+
+.installer:target .details ul li {
+  margin-left: 10px;
+  opacity: 1;
+}
+
+.installer:target .details ul li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.installer:target .details ul li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.installer:target .details ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.installer:target .details ul li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+
+
+
+.installer label {
+  position: absolute;
+  bottom: 20px;
+  right: 90px;
+  height: 40px;
+  width: calc(100% - 320px);
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.installer label input {
+  display: none;
+}
+
+.installer label span {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background: #3F8EFC;
+}
+
+
+.installer label span:after {
+  content: "DOWNLOAD";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0px;
+  left: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle, .toggle:before, .slot__label, .curtain {
+  transition-property: background-color, transform, visibility;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in, cubic-bezier(0.6,0.2,0.4,1.5), linear;
+}
+.toggle:before, .slot, .slot__label {
+  display: block;
+}
+.toggle:before, .curtain {
+  position: absolute;
+}
+.toggle:checked, .curtain {
+  background-color: #19283F;
+}
+.toggle:focus {
+  outline: transparent;
+}
+.toggle {
+  border-radius: 0.75em;
+  box-shadow: 0 0 0 0.1em inset;
+  cursor: pointer;
+  position: relative;
+  margin-right: 0.25em;
+  width: 3em;
+  height: 1.5em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.toggle:before {
+  background: currentColor;
+  border-radius: 50%;
+  content: "";
+  left: 0.2em;
+  width: 1.1em;
+  height: 1.1em;
+}
+.toggle:checked:before {
+  transform: translateX(1.5em);
+  top: 0.2em;
+}
+.toggle:checked ~ .slot .slot__label, .slot__label:nth-child(2) {
+  transform: translateY(-50%) scaleY(0);
+}
+.toggle:checked ~ .slot .slot__label:nth-child(2) {
+  transform: translateY(-100%) scaleY(1);
+}
+
+.toggle:checked ~ .curtain {
+  transform: scaleX(1);
+}
+.slot {
+  color: transparent;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  overflow: hidden;
+  height: 1em;
+  -webkit-text-stroke: 0.05em #fff;
+}
+.slot__label {
+  transform-origin: 50% 0;
+}
+.slot__label:nth-child(2) {
+  transform-origin: 50% 100%;
+}
+.curtain {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: -1;
+}

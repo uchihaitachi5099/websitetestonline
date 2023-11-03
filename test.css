@@ -1,0 +1,42 @@
+@media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .menu-item {
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    .header-section {
+      background-color: #fff;
+    }
+  
+    .slot {
+      width: 20px;
+      height: 10px;
+    }
+  
+    .slot__label {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  
+    .menu {
+      text-align: center;
+    }
+  
+    .menu-item {
+      display: block;
+      margin: 10px 0;
+    }
+  
+    .installer {
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+    .details ul {
+      padding-left: 10px;
+    }
+  }
